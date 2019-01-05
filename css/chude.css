@@ -1,0 +1,152 @@
+*{
+	margin:0;
+	padding:0;	
+	
+	
+}
+#wrapper{
+	max-width:1200px;
+	margin:0 auto; 
+	background-color:#192536;
+	
+	
+}
+header{
+	width:100%;
+	position:relative;	
+	background-color:#21324a;
+	line-height:60px;
+}
+header .menu-top{
+	position:absolute;
+	top:0;
+	right:0;
+	margin-right:10px;
+	vertical-align:central;	
+	background-color:#21324a;
+	
+}
+header .menu-top a{
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	background-color:#21324a;
+}
+header .menu-top a:hover{
+	color:#29b385;
+}
+header input{
+	position:absolute;
+	left:25%;
+	width:400px;
+	line-height:35px;
+	border-radius:5px;
+	margin-top:12.5px;
+	border:none;
+	background-color:white;
+}
+header .icon{
+	position:absolute;	
+	left:56%;
+	top:28%;
+}
+/*nav*/
+
+nav{
+	width:100%;
+	line-height:40px;
+	background-color:#21324a;
+	border:solid 1px #192536;
+	box-sizing:border-box;	
+}
+nav ul li{
+	
+	display:inline-block;	
+}
+nav ul li a{
+	text-decoration:none;
+	padding:0 15px;
+	color:#6a8385;	
+}
+nav ul li a:hover{
+	color:#29b385;
+}
+
+/* article */
+article{
+	width:100%;
+	background-color:#192536;
+	
+}
+
+article h2{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:white;
+	margin-top:30px;
+}
+article .cd{
+	//width:30%;
+	border:solid none yellow;
+	float:left;	
+	margin-top:30px;
+	box-sizing:border-box;
+	min-height: 280px;
+	background-color:#303b4a;
+	margin-left:2.5%;
+}
+.cd img{
+	width:100%;	
+}
+.cd a{
+	text-decoration:none;
+	color:white;
+	font-family:Arial, Tahoma, sans-serif;
+	font-size:18px;
+}
+.cd a:hover{
+	color:#29b385;
+}
+.cd h2{
+	margin-top:5px;
+	padding-left:10px;	
+}
+.cd p{
+	margin-top:15px;
+	padding-left:10px;
+	width:95%;
+	font-family:Arial, Tahoma, sans-serif;
+	font-size:15px;
+	color:#6a8385;
+	text-align:justify;
+}
+article .tt{
+	text-align:center;	
+	clear:both;
+	line-height:100px;
+}
+article .tt a{
+	color:white;
+	text-decoration:none;
+	padding-right:10px;
+	font-size:20px;	
+	font-family:Arial, Tahoma, sans-serif;
+}
+article .tt a:hover{
+	color:#29b385;
+}
+
+
+
+.clear{
+	clear:both;
+}
+footer{
+	background-color:#21324a;
+	line-height:80px;
+	color:white;
+	text-align:center;
+		
+}

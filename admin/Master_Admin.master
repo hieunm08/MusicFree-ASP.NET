@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master_Admin.master.cs" Inherits="admin_Master_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="../images/soc.ico" type="image/x-icon" />
+<link rel="icon" href="../images/soc.ico" type="image/x-icon" />
+    <style type="text/css">
+        .Footer
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="Header"><a>Administrator Management</a></div>
+    <div class="content">   
+    <div class="left">
+    <p> 
+    <ul>
+    <li>Xin Chào: <a href=""><%=Session["DangNhap"]%></a></li>
+        <li><a href="../dangxuat.aspx">Đăng xuất</a></li>
+    </ul>
+    </p>
+    <ul>
+        <li><a href="Admin.aspx">Welcome</a></li>
+        <li><a href="../trangchu.aspx">Trang chủ</a></li>
+        <li><a href="QL_User.aspx">Tài Khoản</a></li>
+        <li><a href="QL_Music.aspx">Bài hát</a></li>
+        <li><a href="QL_TheLoai.aspx">Thể Loại</a></li>
+    </ul>
+    </div>
+    <div class="right">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </div>
+    <div class="Footer">
+    <img src="../images/nenduoi.gif" width="100%" />
+    <br /> CopyRight @ Music.vn
+    <br /> Quản Trị Viên : Nguyễn Minh Hiếu
+    </div>
+    </form>
+</body>
+</html>        

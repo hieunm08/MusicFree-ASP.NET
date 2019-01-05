@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8">
+<title>Bài hát</title>
+<link href="css/baihat.css" rel="stylesheet">
+<link href="css/playlist.css" rel="stylesheet">
+<link href="css/canhan.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet">
+<link href="css/nghenhac.css" rel="stylesheet">
+<link href="css/trangchu.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+    <form runat="server" method="post" id="form1">
+	<div id="wrapper">
+    	<header>
+        	<a href="trangchu.aspx"><img src="images/logo.png"></a>
+            <input type="text" placeholder="    Từ khóa tìm kiếm...">
+            <a href="#"><img src="images/search.png" class="logo"></a>
+            <div id="Hello" runat="server">
+            	
+            </div>
+        </header>
+        
+        
+        <nav>
+        	<ul>
+            	<li><a href="baihat.aspx">Bài hát</a></li>
+                <li><a href="chude.aspx">Chủ đề</a></li>
+                <li><a href="playlist.aspx">Playlist</a></li>
+                <li><a href="canhan.aspx">Trang cá nhân</a></li>
+                
+            </ul>
+        </nav>
+        
+        <article>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </article>
+        
+     <aside>
+        	<a href="#"><img src="images/banner1.jpg" id="min"></a>
+            <a href="#"><h3>Bài Hát Mới</h3></a>
+
+         <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" Width="100%">
+             <ItemTemplate>
+                  <div class="box">
+            	    <a href="#">
+                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("DanAnh") %>'  Width="110px" Height="61px" /></a>
+                   <h2 style="white-space:nowrap;"> <a href="#">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# Eval("MaBH", "~/nghenhac.aspx?M={0}") %>' Text='<%# Eval("TenBH") %>'></asp:HyperLink></a></h2>
+                    <a href="#"><span style="white-space:nowrap;">
+                        <asp:Label ID="Label2" runat="server" Text='<%# Eval("TenCaSi") %>'></asp:Label></span></a> 
+                  </div>
+             </ItemTemplate>
+         </asp:DataList>
+
+         <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:MUSIC %>' SelectCommand="SELECT TOP(10) [MaBH], [DanAnh], [TenBH], [TenCaSi] FROM [BaiHat] ORDER BY [NgayDang] DESC"></asp:SqlDataSource>
+        
+          
+          
+        
+        </aside>
+    
+        <div class="clear"></div>
+        <footer>
+            <p>Giấy phép MXH số 311/GP-BTTTT do Bộ Thông Tin và Truyền thông cấp ngày 05/05/2018</p>
+            	
+        </footer>           
+        
+    </div>
+     </form>  
+</body>
+</html>

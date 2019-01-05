@@ -1,0 +1,71 @@
+
+
+article h3{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:white;
+	
+}
+article .cn{
+	position:relative;	
+	margin-top:30px;
+	margin-left:30px;
+}
+label{
+			display: inline-block;
+			width: 150px;
+			color:white;
+			font-family:Arial, Helvetica, sans-serif;
+			font-weight:bold;
+		}
+
+
+
+
+form a{
+	text-decoration:none;
+	color:white;
+}
+form a:hover{	
+	text-decoration:underline;
+}
+form .login{
+	position:absolute;
+	left:22.5%;
+	
+}
+form .login>#cc{
+	width:110px;
+	line-height:35px;	
+	background-color:#337ab7;
+	border:none;
+	color:white;
+	margin-right:28px;
+}
+
+form .login>#huy{
+	width:110px;
+	line-height:35px;	
+	background-color:#ecc800;
+	border:none;
+	color:white;
+}
+form .login>#cc:hover{
+	background-color:#1b5688;
+}
+form .login>#huy:hover{
+	background-color:#c8aa06;
+}
+
+.clear{
+	clear:both;
+}
+footer{
+	background-color:#21324a;
+	line-height:80px;
+	color:white;
+	text-align:center;
+		
+}
+
+
